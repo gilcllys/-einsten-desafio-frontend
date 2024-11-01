@@ -1,0 +1,22 @@
+<div class="main">
+    <div class="card">
+        <h2>Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <mat-form-field>
+                <mat-label>Usuário</mat-label>
+                <input formControlName="user" matInput placeholder="Digite o seu usuário" type="text">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Senha</mat-label>
+                <input formControlName="password" matInput placeholder="Digite a sua senha" type="password">
+            </mat-form-field>
+        </form>
+        <button *ngIf="!loading" [disabled]="!loginForm.valid" mat-flat-button (click)="onLogin()"> Entrar </button>
+        <mat-spinner *ngIf="loading" diameter="50"></mat-spinner>
+        <div class="footer">
+            <p>Ainda não tem conta ? </p>
+            <a routerLink="/signup"> Cadastre-se</a>
+        </div>
+    </div>
+</div>

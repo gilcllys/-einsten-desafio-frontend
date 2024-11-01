@@ -1,0 +1,40 @@
+<div class="container">
+    <mat-card appearance="outlined">
+        <mat-card-content>
+            <form [formGroup]="filterForm">
+                <mat-form-field>
+                    <mat-label>Bairro </mat-label>
+                    <input formControlName="bairro" matInput type="text">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Cidade </mat-label>
+                    <input formControlName="cidade" matInput type="text">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Tem esgoto tratado ?</mat-label>
+                    <mat-select formControlName="instalacoes_sanitarias">
+                        <mat-option [value]="true">Sim</mat-option>
+                        <mat-option [value]="false">Não</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Tem coleta de lixo ?</mat-label>
+                    <mat-select formControlName="coleta_lixo">
+                        <mat-option [value]="true">Sim</mat-option>
+                        <mat-option [value]="false">Não</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Tem água encanada?</mat-label>
+                    <mat-select formControlName="agua_potavel">
+                        <mat-option [value]="true">Sim</mat-option>
+                        <mat-option [value]="false">Não</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+            <button (click)="aplicarFiltro()" mat-fab>
+                <mat-icon>search</mat-icon>
+            </button>
+        </mat-card-content>
+    </mat-card>
+</div>

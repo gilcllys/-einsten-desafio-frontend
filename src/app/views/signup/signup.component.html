@@ -1,0 +1,33 @@
+<div class="main">
+    <div class="card">
+        <h2>Cadastre-se</h2>
+        <form [formGroup]="signUpForm" (submit)="saveUser()">
+            <mat-form-field>
+                <mat-label>Usuário</mat-label>
+                <input formControlName="user" matInput placeholder="Digite o seu usuário">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput placeholder="Digite o seu usuário">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Senha</mat-label>
+                <input formControlName="password" matInput placeholder="Digite a sua senha" type="password">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Confirme a sua senha</mat-label>
+                <input formControlName="passwordRepeat" matInput placeholder="Repita sua senha" type="password">
+            </mat-form-field>
+        </form>
+        <mat-spinner *ngIf="loading" diameter="50"></mat-spinner>
+        <button *ngIf="!loading" [disabled]="!signUpForm.valid" mat-flat-button (click)="saveUser()"> Casdastrar
+        </button>
+        <div class="footer">
+            <p>Ja tem conta ? </p>
+            <a routerLink="/login"> Entrar</a>
+        </div>
+    </div>
+</div>

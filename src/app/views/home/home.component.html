@@ -1,0 +1,66 @@
+<div class="container">
+    <header>
+        <mat-toolbar>
+            <img src="https://sbot.org.br/wp-content/uploads/2022/12/Logo-Albert-Einstein.jpg" alt="" srcset="">
+        </mat-toolbar>
+    </header>
+    <div class="card">
+        <div class="card-title">
+            <h3>Boas vindas ao Sistema Einsten</h3>
+            <span>Escolha qual ferramenta deseja acessar</span>
+        </div>
+        <div class="content">
+            <div class="box">
+                <mat-icon class="box-icons">groups</mat-icon>
+                <div class="info">
+                    <h4>Sistema de gerenciamento de pacientes</h4>
+                    <span>clique aqui para acessar</span>
+                </div>
+                <button mat-fab (click)="goToPacientes()">
+                    <mat-icon>chevron_right</mat-icon>
+                </button>
+            </div>
+            <div class="box">
+                <mat-icon class="box-icons">waves</mat-icon>
+                <div class="info">
+                    <h4>Gerenciamento de saneamento básico</h4>
+                    <span>clique aqui para acessar</span>
+                </div>
+                <button mat-fab (click)="goToSaneamento()">
+                    <mat-icon>chevron_right</mat-icon>
+                </button>
+            </div>
+        </div>
+        <button (click)="logout()" class="button-sair" mat-flat-button>Sair</button>
+
+    </div>
+    <footer>
+        <div class="telefone">
+            <p>Central de atendimento</p>
+            <div class="estado">
+                <p>São Paulo</p>
+                <div class="contato">
+                    <mat-icon>call</mat-icon>
+                    <p>+55 11 2151-1233</p>
+                </div>
+                <div class="contato">
+                    <mat-icon>call</mat-icon>
+                    <p>+55 11 3620-2550</p>
+                </div>
+            </div>
+            <div class="estado">
+                <p>Goiânia</p>
+                <div class="contato">
+                    <mat-icon>call</mat-icon>
+                    <p>+55 62 3878-5100</p>
+                </div>
+            </div>
+        </div>
+        <div class="social-medias">
+            <a href="https://www.instagram.com/hosp_einstein" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/HospitalAlbertEinstein" target="_blank">Facebook</a>
+            <a href="https://www.youtube.com/user/HospitalEinstein" target="_blank">Youtube</a>
+            <a href="https://www.linkedin.com/company/hospital-albert-einstein" target="_blank">Linkedin</a>
+        </div>
+    </footer>
+</div>

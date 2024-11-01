@@ -1,0 +1,127 @@
+mat-icon {
+    margin-right: 10px;
+}
+
+header {
+    overflow: hidden;
+}
+
+img {
+    width: 700px;
+}
+
+mat-toolbar {
+    background-color: #004F92;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    height: 650px;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+
+    .button-sair {
+        margin-bottom: 15px;
+        margin-left: 480px;
+        width: 50%;
+        height: 10%;
+        border-radius: 10px;
+        position: relative;
+        background-color: red;
+    }
+}
+
+.card-title {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.box {
+    background-color: #F4F3F6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 150px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .box-icons {
+        width: 100px;
+        height: 100px;
+        scale: 2.0;
+    }
+}
+
+mat-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
+
+button {
+    background-color: white;
+}
+
+footer {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid blue;
+    background-color: #004F92;
+
+    .telefone {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .estado {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .contato {
+        display: flex;
+    }
+
+    .social-medias {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+    }
+}

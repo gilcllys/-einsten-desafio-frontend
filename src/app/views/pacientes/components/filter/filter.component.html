@@ -1,0 +1,30 @@
+<div class="container">
+    <mat-card appearance="outlined">
+        <mat-card-content>
+            <form [formGroup]="filterForm">
+                <mat-form-field>
+                    <mat-label>Nome do paciente </mat-label>
+                    <input formControlName="nome" matInput type="text">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Selecione um gênero</mat-label>
+                    <mat-select formControlName="genero">
+                        @for (genero of generosList; track genero) {
+                        <mat-option [value]="genero">{{genero}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Tem esgoto tratado ?</mat-label>
+                    <mat-select formControlName="has_saneamento">
+                        <mat-option [value]="true">Sim</mat-option>
+                        <mat-option [value]="false">Não</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+            <button (click)="aplicarFiltro()" mat-fab>
+                <mat-icon>search</mat-icon>
+            </button>
+        </mat-card-content>
+    </mat-card>
+</div>

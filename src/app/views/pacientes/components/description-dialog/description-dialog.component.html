@@ -1,0 +1,12 @@
+<div class="container">
+    <h2 mat-dialog-title>Paciente: {{this.data.pacienteInfo.nome}}</h2>
+    <mat-dialog-content>
+        <h5>Tem tratamento de esgoto?</h5>
+        <p>{{this.data.pacienteInfo.has_esgoto ? "Sim" : "Não"}}</p>
+        <h5>Histórico de saúde</h5>
+        <p>{{this.data.pacienteInfo.historico_saude}}</p>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button class="cancel" mat-button mat-dialog-close>Close</button>
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,22 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.action {
+    background-color: none;
+}
+
+.button-save {
+    margin: 10px;
+    width: 100%;
+
+    button {
+        border-radius: 5px;
+        width: 10%;
+        background-color: green;
+    }
+}

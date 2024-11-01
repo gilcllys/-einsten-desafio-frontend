@@ -1,0 +1,40 @@
+<div class="container">
+    <h2 mat-dialog-title>Cadastro de saneamento básico</h2>
+    <mat-dialog-content>
+        <form [formGroup]="dialogForm">
+            <mat-form-field>
+                <mat-label>Bairro </mat-label>
+                <input formControlName="bairro" matInput type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Cidade</mat-label>
+                <input formControlName="cidade" matInput placeholder="Digite a sua senha">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Tem esgoto tratado ?</mat-label>
+                <mat-select formControlName="instalacoes_sanitarias">
+                    <mat-option [value]="true">Sim</mat-option>
+                    <mat-option [value]="false">Não</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Tem água encada ?</mat-label>
+                <mat-select formControlName="agua_potavel">
+                    <mat-option [value]="true">Sim</mat-option>
+                    <mat-option [value]="false">Não</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Tem coleta de lixo ?</mat-label>
+                <mat-select formControlName="coleta_lixo">
+                    <mat-option [value]="true">Sim</mat-option>
+                    <mat-option [value]="false">Não</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button (click)="createSaneamento()" class="save" mat-flat-button>Salvar</button>
+        <button class="cancel" mat-button mat-dialog-close>Close</button>
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+    <h2 mat-dialog-title>Cadastro de paciente</h2>
+    <mat-dialog-content>
+        <form [formGroup]="dialogForm">
+            <mat-form-field>
+                <mat-label>Nome do paciente </mat-label>
+                <input formControlName="nome" matInput type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Selecione um gênero</mat-label>
+                <mat-select formControlName="genero">
+                    @for (genero of generosList; track genero) {
+                    <mat-option [value]="genero">{{genero}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Tem esgoto tratado ?</mat-label>
+                <mat-select formControlName="has_saneamento">
+                    <mat-option [value]="true">Sim</mat-option>
+                    <mat-option [value]="false">Não</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Descreva o histórico médico</mat-label>
+                <textarea formControlName="historico_saude" matInput placeholder="Ex. It makes me feel..."></textarea>
+            </mat-form-field>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button (click)="createPaciente()" class="save" mat-flat-button>Salvar</button>
+        <button class="cancel" mat-button mat-dialog-close>Close</button>
+    </mat-dialog-actions>
+</div>
