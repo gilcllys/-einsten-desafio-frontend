@@ -60,7 +60,6 @@ export class SignupComponent {
         )
         .subscribe(
           (result) => {
-            console.log(result)
             if (result == 'User created') {
               this.authService.setIsLogged(false);
               this.goToLogin();

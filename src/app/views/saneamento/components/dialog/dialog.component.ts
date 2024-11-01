@@ -53,7 +53,6 @@ export class DialogComponent {
       "coleta_lixo": this.dialogForm.controls.coleta_lixo.value,
       "instalacoes_sanitarias": this.dialogForm.controls.instalacoes_sanitarias.value,
     }
-    console.log(data);
     this.mainService.createSaneamento(data).subscribe(
       (result) => {
         if (result.id) {

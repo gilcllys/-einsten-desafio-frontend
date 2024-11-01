@@ -52,7 +52,6 @@ export class FilterComponent {
     // Substitua pela sua lógica de filtragem
     this.mainService.filtrarSaneamento(data).subscribe(
       (result) => {
-        console.log(result)
         this.saneamentoService.atualizarSaneamentoList(result);
 
       }
